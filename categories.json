@@ -1,0 +1,37 @@
+[{
+    "id": "nec",
+    "title": "Необхідні або поточні витрати",
+    "rate": "55",
+    "description":
+  },
+  {
+    "id": "play",
+    "title": "Рахунок розваг",
+    "rate": "10",
+    "description":
+  },
+  {
+    "id": "ffa",
+    "title": "Рахунок фінансової свободи",
+    "rate": "10",
+    "description":
+  },
+  {
+    "id": "edu",
+    "title": "Освітній рахунок",
+    "rate": "10",
+    "description":
+  },
+  {
+    "id": "ltss",
+    "title": "Резервний фонд та рахунок майбутніх покупок",
+    "rate": "10",
+    "description":
+  },
+  {
+    "id": "give",
+    "title": "Рахунок подарунків та благодійності",
+    "rate": "5",
+    "description":
+  }
+]
