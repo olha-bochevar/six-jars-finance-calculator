@@ -138,11 +138,12 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 5rem 0;
 }
 /* section MAIN */
-/* main {
+ .main {
   height: 100vh;
-} */
+} 
 
 
 .wrapper {
@@ -249,9 +250,7 @@ section {
   }
 }
 /* section categories */
-.categories {
-  padding: 5rem 0;
-}
+
 .categories__title title {
   font-size: 2rem;
 }
