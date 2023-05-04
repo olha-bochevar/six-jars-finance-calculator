@@ -1,0 +1,22 @@
+section Main (hero section)
+
+1) сложности с установкой background-image . хотела установить для всей обл просмотра фиксированное из-е - не вышло.
+пробовала играться с разными свойствами самого background и с position   
+ /* body::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/jar-with-money-background.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right top;
+    z-index: -1;
+} */
+2) сложности с адаптацией картинки при уменьшении экрана, flex-shrink - 0, но картинка уменьшается. сейчас все приемлемо, т. к. убрала картинку для меньших экранов.
+След. задание или усовершенствование:
+    - все таки сделать для max-width: 1024px картинку фоном
+    - сделать красоту с выделением важным слов ? типа худ. подчеркивание
