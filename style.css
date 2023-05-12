@@ -284,7 +284,7 @@ section.main {
 @media screen and (max-width: 800px) {
  
   section.main {
-    margin: 10rem auto 2rem;
+    margin: 10rem auto 0;
   }
 }
 @media screen and (max-width: 690px) {
