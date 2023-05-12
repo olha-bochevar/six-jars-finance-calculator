@@ -159,11 +159,12 @@ header nav {
 header nav a {
   text-decoration: none;
   transition: transform 0.5s ease-in;
+  color: var(--text);
 }
 header nav a:hover {
   border-bottom: 5px dashed var(--accent);
 }
- header nav a:visited {
+header nav a:visited {
   color: var(--text);
 } 
 header nav a.active {
@@ -308,7 +309,7 @@ section.categories {
   height: 100vh;
   justify-content:stretch;
 }
-.categories__container{
+.categories__container, .calculator__container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -500,3 +501,6 @@ justify-self: flex-end;
 
 
 /* section calculator */
+section.calculator {
+
+}
