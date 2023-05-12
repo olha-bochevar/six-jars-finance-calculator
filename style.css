@@ -318,15 +318,10 @@ section.categories {
 .categories__title {
   font-size: 2rem;
   display: inline-block;
-  align-self: flex-start; 
+  align-self: flex-end; 
+  text-decoration: underline var(--accent);
 }
-.categories__title::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 5px;
-  background-color: var(--accent);
-}
+
 .categories__subtitle {
   margin-bottom: 2rem;
   align-self: flex-start;
