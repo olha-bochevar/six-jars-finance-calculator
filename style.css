@@ -147,29 +147,33 @@ header {
   overflow: hidden;
   top: 0;
   background-color: var(--background);
+  font-size: 1.1rem;
 }
 header nav {
   padding: 2rem 0;
+  display: flex;
+    justify-content: flex-end;
+    gap: 4rem;
 }
 
 header nav a {
   text-decoration: none;
-  padding: 0.5rem;
-  transition: transform 0.3s ease-in;
+  transition: transform 0.5s ease-in;
 }
-header nav a:visited {
+header nav a:hover {
+  border-bottom: 5px dashed var(--accent);
+}
+ header nav a:visited {
   color: inherit;
-}
+  -webkit-color: inherit;
+  -moz-color: inherit;
+} 
 header nav a.active {
-  color: var(--accent);
-  background-color: var(--secondary);
-  border-radius: 10px;
+  border-bottom: 5px dashed var(--accent);
 }
 
 /* sections */
-/* main {
-  margin-top: 5rem;
-} */
+
 section {
   width: 100%;
   height: 100%;
@@ -278,8 +282,21 @@ section.main {
   }
 }
 @media screen and (max-width: 800px) {
+ 
   section.main {
     margin: 5rem auto 2rem;
+  }
+}
+@media screen and (max-width: 690px) {
+  header nav{
+    font-size: 1.2rem;
+    justify-content: space-between;
+  }
+  .main__container{
+    padding-top: 0;
+  }
+  .title {
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 420px) {
@@ -434,7 +451,7 @@ margin-top: 2rem;
 }
 
 .categories__subtitle{
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 .categories__card-container {
   margin-top: 1.5rem;
@@ -471,6 +488,9 @@ justify-self: flex-end;
 .categories__steps span {
   width: 30px;
   height: 30px;
+}
+.categories__button-link {
+  width: 100%;
 }
 }
 /* section calculator */
