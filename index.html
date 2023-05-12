@@ -1,67 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Калькулятор збережень за методом глечиків</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
-  <title>Калькулятор збережень за методом глечиків</title>
-</head>
-
-<body>
-  <main>
-    <section class="main"> <!-- main -->
+  <body>
+    <header>
       <div class="wrapper">
-        <div class="main__main-content">
-          <div class="main__info">
-            <h1 class="main__title title">
-              Калькулятор збережень за методом глечиків
-            </h1>
-            <p class="main__description">
-              Метод глечиків<sup>*</sup> - це прямий шлях до фінансової свободи та найлегший
-              спосіб керування своїми фінансами.
-            </p>
-            <p class="main__description">
-              Розподіліть свої доходи за шістьма категоріями (глечиками), кожна
-              з яких відповідає за свою статтю витрат.
-            </p>
-            <button class="main__button button" id="btn-begin-calc">Розрахувати збереження</button>
-          </div>
-          <div class="main__img">
-            <img src="./images/jar-with-money.jpg" alt="Jar with money" />
-          </div>
-        </div>
-        <aside class="main__method-info">
-          <sup>*</sup>
-          <p><a href="https://www.harveker.com/blog/6-step-money-managing-system/">«Метод шести глечиків»</a>, або
-            «Правило глечиків» (англ. 6 Jars Budgeting
-            Method), — одна з варіацій класичного методу конвертів для складання
-            бюджету. Цю систему управління капіталом описав <a href="https://www.harveker.com/">Т. Харв Екер</a> у своїй
-            книзі «Думай як мільйонер».</p>
+        <nav>
+          <a href="#main" data-target="#main" class="active">Головна</a>
 
-        </aside>
-      </div>
-    </section>
-    <section class="categories">
-      <div class="wrapper">
-        <h2 class="categories__title title">Перед тим, як почнемо</h2>
-        <h3 class="categories__subtitle subtitle">Давайте розглянемо, в які глечики автор пропонує відкладати наші мильйони:</h3>
-        <div class="categories__list">
-        </div>
-        <div class="categories__buttons">
-        <button class="categories__button button" id="btn-calc-default">Хочу такі самі категорії та ставки</button>
-        <button class="categories__button button" id="btn-calc-custom">А можна трохи відкорегую?</button>
-      </div>
-      </div>
-    </section>
-  </main>
-  <!-- <footer></footer> -->
-  <script src="fetch.js"></script>
-  <script src="script.js"></script>
-</body>
+          <a href="#categories" data-target="#categories">Глечики</a>
 
+          <a href="#calculator" data-target="#calculator">Калькулятор</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="main" id="main">
+        <!-- main -->
+        <div class="main__container wrapper">
+          <div class="main__main-content">
+            <div class="main__info">
+              <h1 class="main__title title">
+                Калькулятор збережень за методом глечиків
+              </h1>
+              <p class="main__description">
+                Метод глечиків<sup>*</sup> - це прямий шлях до фінансової
+                свободи та найлегший спосіб керування своїми фінансами.
+              </p>
+              <p class="main__description">
+                Розподіліть свої доходи за шістьма категоріями (глечиками),
+                кожна з яких відповідає за свою статтю витрат.
+              </p>
+              <button
+                class="main__button button"
+                id="btn-start-calc"
+                data-target="#categories"
+                onclick="showSection('categories')"
+              >
+                Розрахувати збереження
+              </button>
+            </div>
+            <div class="main__img">
+              <img src="./images/jar-with-money.jpg" alt="Jar with money" />
+            </div>
+          </div>
+          <aside class="main__method-info">
+            <sup>*</sup>
+            <p>
+              <a
+                href="https://www.harveker.com/blog/6-step-money-managing-system/"
+                target="_blank"
+                >«Метод шести глечиків»</a
+              >, або «Правило глечиків» (англ. 6 Jars Budgeting Method), — одна
+              з варіацій класичного методу конвертів для складання бюджету. Цю
+              систему управління капіталом описав
+              <a href="https://www.harveker.com/" target="_blank"
+                >Т. Харв Екер</a
+              >
+              у своїй книзі «Думай як мільйонер».
+            </p>
+          </aside>
+        </div>
+      </section>
+      <section class="categories" id="categories">
+        <div class="categories__container wrapper">
+          <h2 class="categories__title title">Перед тим, як почнемо</h2>
+          <h3 class="categories__subtitle subtitle">
+            Давайте розглянемо, в які глечики автор пропонує відкладати наші
+            мільйони:
+          </h3>
+
+          <div class="categories__gallery">
+            <div class="categories__card-container">
+              <button class="categories__button prev" onclick="showCard(-1)">
+                &#10094;
+              </button>
+
+              <div class="categories__card card"></div>
+              <div class="categories__chart chart">
+                <div class="chart__empty-circle"></div></div>
+                <button class="categories__button next" onclick="showCard(1)">
+                  &#10095;
+                </button>
+            </div>
+            
+            <div class="categories__steps">
+            
+            </div>
+          </div>
+            <button class="categories__button-link button" id="btn-calc-default"
+            data-target="#calculator"
+                onclick="showSection('calculator')">
+              Вперед рахувати!
+            </button>
+        
+        </div>
+      </section>
+      <section class="calculator" id="calculator">
+        <div class="calculator__container wrapper">
+          <div class="calculator__chart">
+            <div class="calculator__empty-circle"></div>
+          </div>
+          <form action="" class="calculator__form form">
+            <div class="form__income">
+              <label for="income">Мій дохід:</label
+              ><input type="number" name="income" />
+            </div>
+            <div class="form__calc-mode">
+              <label for="default-mode" class="button"
+                >Хочу такі самі категорії та ставки</label
+              >
+              <input type="radio" name="mode" id="default-mode" />
+              <label for="custom-mode" class="button"
+                >А можна трохи відкорегую?</label
+              >
+              <input type="radio" name="mode" id="custom-mode" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- <footer></footer> -->
+    <script src="fetch.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

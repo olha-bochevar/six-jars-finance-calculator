@@ -24,3 +24,30 @@ section Main (hero section)
 section categories
 1) height: 100vh
 запуталась, это касается и предыдущей секции
+
+
+header
+1) fixed header
+    Надо наконец запомнить паттерн
+        header{
+        position: fixed;
+        width: 100%;
+        overflow: hidden;
+        top:0;
+        }
+        main {
+        margin-top: 5rem;
+        }
+2) В breadcrump "/" между пунктами сделала не через псевдоэлемент, т.к. не получилось убрать стили для него, а выглядело не очень.
+
+
+3) для кнопок disabled не получалось убрать hover.
+на стак оверфлоу нашла такое решение, понравилось
+https://stackoverflow.com/questions/11600687/hover-and-active-only-when-not-disabled
+
+button:hover:enabled{
+    /*your styles*/
+}
+button:active:enabled{
+    /*your styles*/
+}
