@@ -164,9 +164,7 @@ header nav a:hover {
   border-bottom: 5px dashed var(--accent);
 }
  header nav a:visited {
-  color: inherit;
-  -webkit-color: inherit;
-  -moz-color: inherit;
+  color: var(--text);
 } 
 header nav a.active {
   border-bottom: 5px dashed var(--accent);
@@ -185,8 +183,9 @@ section {
 }
 /* section MAIN */
 section.main {
-  height: 100vh;
-  padding: 0;
+  height: 100%;
+    padding: 0;
+    margin-top: 5rem;
 }
 .main__container,
 .categories__container,
@@ -284,7 +283,7 @@ section.main {
 @media screen and (max-width: 800px) {
  
   section.main {
-    margin: 5rem auto 2rem;
+    margin: 10rem auto 2rem;
   }
 }
 @media screen and (max-width: 690px) {
@@ -493,4 +492,11 @@ justify-self: flex-end;
   width: 100%;
 }
 }
+@media screen and (max-width: 490px){
+  header nav{
+    gap: 0;
+  }
+}
+
+
 /* section calculator */

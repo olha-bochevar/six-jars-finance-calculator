@@ -51,3 +51,5 @@ button:hover:enabled{
 button:active:enabled{
     /*your styles*/
 }
+
+4) не вышло сделать fade in для категорий
